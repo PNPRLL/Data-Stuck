@@ -41,24 +41,6 @@ class ArrayStack:
     def print_stack(self):
         print(self.data)
 
-Match = ArrayStack()
-word = str(input())
-def is_parentheses_matching(a):
-    v = True
-    for i in word:
-        if i == "(":
-            Match.push(i)
-        elif i == ")":
-            if Match.is_empty():
-                v = False
-            Match.pop()
-        # Match.print_stack()
 
-    return Match.is_empty() and v
+Student = ArrayStack()
 
-if is_parentheses_matching(Match) == True:
-    print(f"Parentheses in {word} are matched")
-    print("True")
-else:
-    print(f"Parentheses in {word} are unmatched")
-    print("False")
